@@ -15,6 +15,19 @@ public class linkedList {
         }
     }
 
+    public static void insertAfter(int key, int data) { // Insert a new node after a given key
+        Node current = head;
+        while (current != null) {
+            if (current.data == key) {
+                Node newNode = new Node(data); // Create the new node
+                newNode.next = current.next; // Point the new node to the next node
+                current.next = newNode; // Point the current node to the new node
+                break;
+            }
+            current = current.next; // Move to the next node
+        }
+    }
+
     public static void display() { // Display the values in the list
         Node current = head;
         while (current != null) {
