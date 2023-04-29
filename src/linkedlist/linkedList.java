@@ -28,6 +28,11 @@ public class linkedList {
         }
     }
 
+    public static void pop() { // Delete the first node
+        if (head != null) {
+            head = head.next; // Update the head to the next node
+        }
+    }
     public static void display() { // Display the values in the list
         Node current = head;
         while (current != null) {
