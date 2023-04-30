@@ -63,5 +63,15 @@ public class linkedList {
         }
         System.out.println("null");
     }
+    public static Node search(int key) {
+        Node current = head;
+        while (current != null) {
+            if (current.data == key) {
+                return current;
+            }
+            current = current.next;
+        }
+        return null;
+    }
 
 }
